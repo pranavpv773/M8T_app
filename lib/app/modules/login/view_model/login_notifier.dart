@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/widgets.dart';
 
 class LoginNotifier with ChangeNotifier {
@@ -5,6 +7,14 @@ class LoginNotifier with ChangeNotifier {
   final password = TextEditingController();
   final loginKey = GlobalKey<FormState>();
   bool obsecure = true;
+  bool signUp = false;
+
+  void cardFunction(bool change) {
+    log(change.toString());
+    signUp = change;
+    notifyListeners();
+  }
+
   Future<void> getLogin(BuildContext context) async {
     if (loginKey.currentState!.validate()) {}
   }

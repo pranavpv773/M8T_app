@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:m8app/app/modules/login/view_model/login_notifier.dart';
+import 'package:m8app/app/modules/signup/view_model/signup_notifier.dart';
 import 'package:m8app/app/modules/splash/view/splash.dart';
 import 'package:m8app/app/modules/splash/view_model/splash_notifier.dart';
 import 'package:m8app/app/utils/app_routes.dart';
@@ -25,6 +26,9 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(
           create: (create) => LoginNotifier(),
         ),
+        ChangeNotifierProvider(
+          create: (create) => SignUpNotifier(),
+        ),
       ],
       child: ScreenUtilInit(
         designSize: const Size(360, 690),
@@ -38,7 +42,7 @@ class MyApp extends StatelessWidget {
               iconTheme: IconThemeData(
                 color: AppColors.kDark,
               ),
-              scaffoldBackgroundColor: AppColors.kOrange,
+              scaffoldBackgroundColor: AppColors.secondary,
               primarySwatch: Colors.blue,
             ),
             home: const SplashScreen(),

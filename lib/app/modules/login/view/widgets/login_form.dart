@@ -3,8 +3,6 @@ import 'package:iconify_flutter/iconify_flutter.dart';
 import 'package:iconify_flutter/icons/ic.dart';
 import 'package:iconify_flutter/icons/mdi.dart';
 import 'package:m8app/app/modules/login/view_model/login_notifier.dart';
-import 'package:m8app/app/modules/signup/view/sign_up.dart';
-import 'package:m8app/app/utils/app_routes.dart';
 import 'package:m8app/app/utils/colors.dart';
 import 'package:provider/provider.dart';
 
@@ -65,9 +63,7 @@ class LoginFormWidget extends StatelessWidget {
               const Text("New to our Platform?"),
               TextButton(
                 onPressed: () {
-                  AppRoutes.nextScreen(
-                    screen: const SignUpScreen(),
-                  );
+                  context.read<LoginNotifier>().cardFunction(true);
                 },
                 child: const Text(
                   "Sign Up",
