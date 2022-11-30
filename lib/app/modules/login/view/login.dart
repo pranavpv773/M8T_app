@@ -11,7 +11,7 @@ class LoginScreen extends StatelessWidget {
 
     return Scaffold(
         body: Center(
-      child: SignUpBody(
+      child: Body(
         height: height,
         width: width,
       ),
