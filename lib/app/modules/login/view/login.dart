@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'widgets/body.dart';
+import 'widgets/Sign_up_body.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -10,7 +10,11 @@ class LoginScreen extends StatelessWidget {
     final height = MediaQuery.of(context).size.height;
 
     return Scaffold(
-      body: Body(height: height, width: width),
-    );
+        body: Center(
+      child: SignUpBody(
+        height: height,
+        width: width,
+      ),
+    ));
   }
 }
