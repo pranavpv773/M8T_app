@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:m8app/app/modules/login/view_model/login_notifier.dart';
-import 'package:m8app/app/modules/signup/view_model/signup_notifier.dart';
+import 'package:m8app/app/modules/login/view_model/signup_notifier.dart';
 import 'package:m8app/app/modules/splash/view/splash.dart';
 import 'package:m8app/app/modules/splash/view_model/splash_notifier.dart';
 import 'package:m8app/app/utils/app_routes.dart';

@@ -5,32 +5,6 @@ import 'package:m8app/app/utils/colors.dart';
 
 import 'login_form.dart';
 
-class Body extends StatelessWidget {
-  const Body({
-    Key? key,
-    required this.height,
-    required this.width,
-  }) : super(key: key);
-
-  final double height;
-  final double width;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      color: AppColors.secondary,
-      height: height,
-      width: width,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          LoginCard(width: width, height: height),
-        ],
-      ),
-    );
-  }
-}
-
 class LoginCard extends StatelessWidget {
   const LoginCard({
     Key? key,
