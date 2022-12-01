@@ -10,11 +10,12 @@ class LoginScreen extends StatelessWidget {
     final height = MediaQuery.of(context).size.height;
 
     return Scaffold(
-        body: Center(
-      child: Body(
-        height: height,
-        width: width,
+      body: Center(
+        child: Body(
+          height: height,
+          width: width,
+        ),
       ),
-    ));
+    );
   }
 }

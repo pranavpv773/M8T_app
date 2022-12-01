@@ -2,10 +2,12 @@ import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:m8app/app/app_style/app_textsstyles.dart';
+import 'package:m8app/app/modules/home/view/home.dart';
 import 'package:m8app/app/modules/login/view/widgets/button_widget.dart';
 import 'package:m8app/app/modules/login/view/widgets/textform.dart';
 import 'package:m8app/app/modules/login/view_model/login_notifier.dart';
 import 'package:m8app/app/modules/login/view_model/signup_notifier.dart';
+import 'package:m8app/app/utils/app_routes.dart';
 import 'package:m8app/app/utils/colors.dart';
 import 'package:provider/provider.dart';
 
@@ -163,7 +165,9 @@ class SignUpCard extends StatelessWidget {
                         horizontal: 40,
                         vertical: 10,
                         fn: () {
-                          context.read<SignUpNotifier>().signUpFn(context);
+                          AppRoutes.removeScreenUntil(
+                            screen: const HomeScreen(),
+                          );
                         },
                         title: 'Sign Up',
                       ),
