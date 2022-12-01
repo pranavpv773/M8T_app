@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:m8app/app/modules/category/view_model/category_notifier.dart';
 import 'package:m8app/app/modules/login/view_model/login_notifier.dart';
 import 'package:m8app/app/modules/login/view_model/signup_notifier.dart';
 import 'package:m8app/app/modules/splash/view/splash.dart';
@@ -28,6 +29,9 @@ class MyApp extends StatelessWidget {
         ),
         ChangeNotifierProvider(
           create: (create) => SignUpNotifier(),
+        ),
+        ChangeNotifierProvider(
+          create: (create) => CategoryNotifier(),
         ),
       ],
       child: ScreenUtilInit(
