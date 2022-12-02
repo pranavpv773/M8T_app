@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:m8app/app/app_style/app_textsstyles.dart';
+import 'package:m8app/app/modules/category/view/category.dart';
 import 'package:m8app/app/modules/category/view_model/category_notifier.dart';
+import 'package:m8app/app/utils/app_routes.dart';
 import 'package:m8app/app/utils/colors.dart';
 import 'package:provider/provider.dart';
 
@@ -23,7 +25,7 @@ class CardWidget extends StatelessWidget {
       padding: const EdgeInsets.symmetric(vertical: 15.0),
       child: GestureDetector(
         onTap: () {
-          context.read<CategoryNotifier>().fetchCategoryFn();
+          AppRoutes.nextScreen(screen: const CategoryScreen());
         },
         child: Card(
           elevation: 10,

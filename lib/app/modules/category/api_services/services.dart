@@ -8,8 +8,9 @@ class CategoryServices {
   Future<CategoryModel> fetchCategory() async {
     log('reached fn');
     final dio = Dio();
+    final String api = "${ApiEndPoints().baseUrl}${ApiEndPoints().productApi}";
     try {
-      Response response = await dio.get(ApiEndPoints().categoryApi);
+      Response response = await dio.get(api);
       if (response.statusCode == 200) {
         log('reached success');
         return CategoryModel.fromJson(response.data);
